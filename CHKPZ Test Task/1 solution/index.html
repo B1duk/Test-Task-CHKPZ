@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
+    <link
+      href="https://use.typekit.net/emv3zbo.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/Фон обоевРесурс 1Логотип ЧКПЗ 1.png"
+    />
+    <title>Сменная выработка станков №3</title>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <div class="logo-container">
+          <svg class="logo" viewBox="0 0 86 53">
+            <path
+              d="M39.2679 0L35.3899 15.1144C34.5944 17.6998 
+                31.7107 19.8874 28.827 19.8874H28.5287C25.5456 
+                19.8874 23.7557 17.6998 24.4518 15.015L28.3298 
+                0.0994371H8.04466L2.17787 23.0694H56.8683L60.9452 
+                7.06004L68.9996 26.2514L51.9959 41.9625L55.3767 
+                28.8368H0.686313L0.288564 30.4278C-1.10356 35.9962 
+                2.67506 40.4709 8.74072 40.4709H28.827L25.645 53H59.1554L85.5062 
+                28.5385L73.5737 0H39.2679Z"
+              fill="#315AB6"
+            />
+          </svg>
+        </div>
+        <h3 class="title-text">Сменная выработка станков №3</h3>
+      </div>
+      <div class="switcher">
+        <h2 class="switcher-text">ИЗГОТОВЛЕНО</h2>
+        <h2 class="switcher-text">/</h2>
+        <h2 class="switcher-text">ОСТАЛОСЬ</h2>
+      </div>
+    </header>
+    <main>
+      <div class="statistics">
+        <div class="statistic-card">
+          <div class="statistic-top-line">
+            <p class="statistic-card-number">2-3-14</p>
+            <p class="statistic-card-type">Токарная с ЧПУ 4</p>
+          </div>
+          <div class="progress-bar-block">
+            <div class="progress-bar"></div>
+          </div>
+          <p class="statistic-card-name">Александров И. И.</p>
+        </div>
+
+        <div class="statistic-card">
+          <div class="statistic-top-line">
+            <p class="statistic-card-number">2-3-14</p>
+            <p class="statistic-card-type">Токарная с ЧПУ 4</p>
+          </div>
+          <div class="progress-bar-block">
+            <div class="progress-bar-container" data-progress="95"></div>
+          </div>
+          <p class="statistic-card-name">Иванов А. А.</p>
+        </div>
+
+        <div class="statistic-card">
+          <div class="statistic-top-line">
+            <p class="statistic-card-number">2-3-14</p>
+            <p class="statistic-card-type">Токарная с ЧПУ 4</p>
+          </div>
+          <div class="progress-bar-block">
+            <div class="progress-bar-container" data-progress="75"></div>
+          </div>
+          <p class="statistic-card-name">Александров И. И.</p>
+        </div>
+
+        <div class="statistic-card">
+          <div class="statistic-top-line">
+            <p class="statistic-card-number">2-3-14</p>
+            <p class="statistic-card-type">Токарная с ЧПУ 4</p>
+          </div>
+          <div class="progress-bar-block">
+            <div class="progress-bar-container" data-progress="95"></div>
+          </div>
+          <p class="statistic-card-name">Иванов А. А.</p>
+        </div>
+
+        <div class="statistic-card">
+          <div class="statistic-top-line">
+            <p class="statistic-card-number">2-3-14</p>
+            <p class="statistic-card-type">Токарная с ЧПУ 4</p>
+          </div>
+          <div class="progress-bar-block">
+            <div class="progress-bar-container" data-progress="75"></div>
+          </div>
+          <p class="statistic-card-name">Александров И. И.</p>
+        </div>
+
+        <div class="statistic-card">
+          <div class="statistic-top-line">
+            <p class="statistic-card-number">2-3-14</p>
+            <p class="statistic-card-type">Токарная с ЧПУ 4</p>
+          </div>
+          <div class="progress-bar-block">
+            <div class="progress-bar-container" data-progress="95"></div>
+          </div>
+          <p class="statistic-card-name">Иванов А. А.</p>
+        </div>
+
+        <div class="statistic-card">
+          <div class="statistic-top-line">
+            <p class="statistic-card-number">2-3-14</p>
+            <p class="statistic-card-type">Токарная с ЧПУ 4</p>
+          </div>
+          <div class="progress-bar-block">
+            <div class="progress-bar-container" data-progress="75"></div>
+          </div>
+          <p class="statistic-card-name">Александров И. И.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <!--БИБИЛИОТЕКА ProgressBar.js-->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const containers = document.querySelectorAll('.progress-bar-container');
+      containers.forEach(container => {
+                const progressValue = parseInt(container.getAttribute('data-progress')) || 0;
+                
+                const bar = new ProgressBar.Circle(container, {
+                    color: '#009846',
+                    trailColor: '#9d9d9d',
+                    strokeWidth: 20,
+                    trailWidth: 20,
+                    easing: 'easeInOut',
+                    text: {
+                        value: `${progressValue}%`,
+                        className: 'progressbar-text',
+                        style: {
+                            color: '#000',
+                            position: 'absolute',
+                            left: '50%',
+                            top: '50%',
+                            padding: 0,
+                            margin: 0,
+                            transform: {
+                                prefix: true,
+                                value: 'translate(-50%, -50%)'
+                            }
+                        }
+                    },
+                    step: function(state, circle) {
+                        circle.path.setAttribute('stroke', '#009846');
+                    }
+                });
+
+                // Запускаем анимацию
+                bar.animate(progressValue / 100);
+
+                // Добавляем hover-эффекты
+                container.addEventListener('mouseenter', function() {
+                    bar.path.setAttribute('stroke', '#015524');
+                });
+                container.addEventListener('mouseleave', function() {
+                    bar.path.setAttribute('stroke', '#009846');
+                });
+            });
+    });
+  </script>
+</html>
