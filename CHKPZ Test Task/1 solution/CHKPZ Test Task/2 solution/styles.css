@@ -1,0 +1,213 @@
+/*ОБНУЛЯЮЩИЕ СТИЛИ*/
+
+@font-face {
+    font-family: 'Panton Extra Bold';
+    src: url('../Panton-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+input[type='file'] {
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #e6e5eb;
+    padding: 0 70px;
+}
+
+header {
+    padding: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    max-width: 600px;
+    gap: 15px;
+    align-items: center;
+}
+
+.logo-container {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+.title-text {
+    font-family: 'Panton Extra Bold';
+    text-transform: uppercase;
+    color: #315AB6;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+
+
+table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th{
+    border: 1px solid white;
+    padding: 15px;
+    font-family: 'Panton Extra Bold';
+    font-size: 25px;
+    background-color: #315AB6;
+    color:#ffffff;
+}
+
+td{
+ border: 1px solid #315AB6;
+ padding:15px;
+ font-family: proxima-nova, sans-serif;
+ font-size: 23px;
+ 
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+tbody tr:hover{
+    background-color: #6d8dd7;
+    cursor: pointer;
+}
+
+/*добавил перенос слов на тот случай, если причина простоя потеряет ограничение в 80 символов*/
+
+td:nth-child(3),
+th:nth-child(3) {
+  width: 773px;
+  height: auto;
+  max-width: 773px; 
+  word-wrap: break-word; 
+  white-space: normal; 
+  overflow-wrap: break-word;
+}
+
+.system-message{
+    font-family:  proxima-nova, sans-serif;
+}
